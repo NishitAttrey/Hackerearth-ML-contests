@@ -29,10 +29,6 @@ for i in tqdm(range(train.shape[0])):
   training_images.append(img)
 
 datagen = ImageDataGenerator(
-        featurewise_center=False,  # set input mean to 0 over the dataset
-        samplewise_center=False,  # set each sample mean to 0
-        featurewise_std_normalization=False,  # divide inputs by std of the dataset
-        samplewise_std_normalization=False,  # divide each input by its std
         zca_whitening=False,  # apply ZCA whitening
         rotation_range=10,  # randomly rotate images in the range (degrees, 0 to 180)
         zoom_range = 0.1, # Randomly zoom image 
